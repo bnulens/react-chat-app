@@ -3,16 +3,16 @@ const { GraphQLServer } = require("graphql-yoga");
 const typeDefs = `
 type Message {
     id: ID!
-    user: string!
-    content: string!
+    user: String!
+    content: String!
 }
 
 type Query {
-    messages: [Messages!]
+    messages: [Message!]
 }
 
 type Mutation {
-    postMessage(user: string!, content: string!): ID!
+    postMessage(user: String!, content: String!): ID!
 }
 `;
 
@@ -33,7 +33,17 @@ const resolvers = {
   },
 };
 
-const server = new GraphQLServer({ typeDefs, resolvers });
-server.start(({ port }) => {
-  console.log(`Server running on port ${port}`);
-});
+const startServer = async () => {
+  try {
+    const server = new GraphQLServer({ typeDefs, resolvers });
+    const port = process.env.port || 5000;
+
+    server.start(({ port }) => {
+      console.log(`\u26A1 Running on port: ${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+startServer();
