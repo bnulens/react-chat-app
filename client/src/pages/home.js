@@ -1,10 +1,17 @@
 import React from "react";
-import Chat from "../components/Chat";
 
-const Home = ({ user }) => {
+import Chat from "../components/Chat";
+import Time from "../components/Time";
+
+import { HomeHeading } from "../style/pagestyling/styledHome";
+
+const Home = () => {
   return (
     <>
-      <h1>The quick brown fox jumps over the lazy dog</h1>
+      <HomeHeading>
+        <h1>Welcome to your chat</h1>
+        <Time />
+      </HomeHeading>
       <Chat />
     </>
   );

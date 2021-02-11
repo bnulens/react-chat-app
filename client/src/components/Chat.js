@@ -1,6 +1,8 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
 
+import { ChatWrapper } from "../style/compstyling/styledChat";
+
 const GET_MESSAGES = gql`
   query {
     messages {
@@ -19,7 +21,13 @@ const Messages = () => {
 };
 
 const Chat = () => {
-  return <Messages />;
+  return (
+    <>
+      <ChatWrapper>
+        <Messages />
+      </ChatWrapper>
+    </>
+  );
 };
 
 export default Chat;
