@@ -75,51 +75,51 @@ export default createGlobalStyle`
         font-family: 'Cabin';
         font-weight: 900;
         font-display: swap;
-        src: local('Cabin'), url('../fonts/Cabin-Bold.ttf') format('truetype');
+        src: local('Cabin-Bold'), url('../fonts/Cabin-Bold.ttf') format('truetype');
     }
     @font-face {
         font-family: 'Cabin';
         font-weight: 900;
         font-style: italic;
         font-display: swap;
-        src: local('Cabin'), url('../fonts/Cabin-BoldItalic.ttf') format('truetype');
+        src: local('Cabin-BoldItalic'), url('../fonts/Cabin-BoldItalic.ttf') format('truetype');
     }
     @font-face {
         font-family: 'Cabin';
         font-weight: normal;
         font-display: swap;
-        src: local('Cabin'), url('../fonts/Cabin-Italic.ttf') format('truetype');
+        src: local('Cabin-Italic'), url('../fonts/Cabin-Italic.ttf') format('truetype');
     }
     @font-face {
         font-family: 'Cabin';
         font-weight: 500;
         font-display: swap;
-        src: local('Cabin'), url('../fonts/Cabin-Medium.ttf') format('truetype');
+        src: local('Cabin-Medium'), url('../fonts/Cabin-Medium.ttf') format('truetype');
     }
     @font-face {
         font-family: 'Cabin';
         font-weight: 500;
         font-style: italic;
         font-display: swap;
-        src: local('Cabin'), url('../fonts/Cabin-MediumItalic.ttf') format('truetype');
+        src: local('Cabin-MediumItalic'), url('../fonts/Cabin-MediumItalic.ttf') format('truetype');
     }
     @font-face {
         font-family: 'Cabin';
         font-weight: normal;
         font-display: swap;
-        src: local('Cabin'), url('../fonts/Cabin-Regular.ttf') format('truetype');
+        src: local('Cabin-Regular'), url('../fonts/Cabin-Regular.ttf') format('truetype');
     }
     @font-face {
         font-family: 'Cabin';
         font-weight: 700;
         font-display: swap;
-        src: local('Cabin'), url('../fonts/Cabin-SemiBold.ttf') format('truetype');
+        src: local('Cabin-SemiBold'), url('../fonts/Cabin-SemiBold.ttf') format('truetype');
     }
     @font-face {
         font-family: 'Cabin';
         font-weight: 700;
         font-style: italic;
         font-display: swap;
-        src: local('Cabin'), url('../fonts/Cabin-SemiBoldItalic.ttf') format('truetype');
+        src: local('Cabin-SemiBoldItalic'), url('../fonts/Cabin-SemiBoldItalic.ttf') format('truetype');
     }
 `;
