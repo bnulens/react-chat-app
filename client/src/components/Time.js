@@ -1,18 +1,31 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+import {
+  ToggleLabel,
+  ToggleWrapper,
+  ToggleSlider,
+  HiddenLabel,
+  HiddenInput,
+} from "../style/compstyling/styledSlider";
+
 const TimePiece = styled.div`
-  span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
+  .time-display {
     display: block;
-    max-width: 78px;
-    padding: 8px;
-    color: var(--color-green);
-    border: 2px solid var(--color-green);
-    border-radius: 25px;
+    font-size: 16px;
+    color: var(--color-white);
   }
 `;
 
 const Time = () => {
+  const [viewSeconds, setViewSeconds] = useState(false);
+
   const getTime = () => {
     const now = new Date();
     const hours = `${now.getHours() < 10 ? "0" : ""}${now.getHours()}`;
@@ -21,6 +34,7 @@ const Time = () => {
 
     return `${hours}:${minutes}:${seconds}`;
   };
+
   const [time, setTime] = useState(getTime);
 
   setInterval(() => {
@@ -29,7 +43,21 @@ const Time = () => {
 
   return (
     <TimePiece>
-      <span>{time}</span>
+      <span className="time-display">
+        {viewSeconds ? time : time.substr(0, 5)}
+      </span>
+      <ToggleWrapper>
+        <ToggleLabel>
+          <HiddenLabel />
+          <HiddenInput
+            type="checkbox"
+            name="toggleSeconds"
+            checked={viewSeconds}
+            onChange={() => setViewSeconds(!viewSeconds)}
+          />
+          <ToggleSlider />
+        </ToggleLabel>
+      </ToggleWrapper>
     </TimePiece>
   );
 };
