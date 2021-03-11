@@ -15,6 +15,8 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/abc" component={Home} />
+          <Route exact path="/xyz" component={Home} />
           <Redirect to="/" />
         </Switch>
       </Layout>
